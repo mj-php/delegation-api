@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "5ccc79a9-473d-47f7-909a-8d9275b34bbb",
+		"name": "Delegations Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11036983"
+	},
+	"item": [
+		{
+			"name": "Send Worker on Delegation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "worker_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "country_code",
+							"value": "DE",
+							"type": "text"
+						},
+						{
+							"key": "start",
+							"value": "2023-02-26 08:00:00",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "2023-02-27 12:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Worker Delegations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/worker/1/delegations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"worker",
+						"1",
+						"delegations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Worker",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/worker/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"worker",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
